@@ -1,1 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleGames</title>
+    <link rel="stylesheet" href="external.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="main.html"><img id="dice_img" src="images/Dice.png">SimpleGames</a> </div>
+            <div class="box">
+                <input type="text" id="searchBar" placeholder="Search game...">
+                <a href="#">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button><a href="LogIn.html">Log In</a></button>
+            </ul>
+        </div>
+    </nav>
+    <div class="allgames">
+        <ul id="gameList">
+            <li class="icontext"><a href="Sokoban.html"><img src="images/sokoban.png" height="400px"><br>Sokoban</a></li>
+            <li class="icontext"><a href="FourInARow.html"><img src="images/fourinarow.png" height="400px"><br>Four In A Row</a></li>
+            <li class="icontext"><a href="TicTacToe.html"><img src="images/tictactoe.png" height="400px"><br>TicTacToe</a></li>
+        </ul>
+    </div>
 
+    <script>
+        document.getElementById('searchBar').addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            const games = document.querySelectorAll('#gameList li');
+
+            games.forEach(function(game) {
+                const gameName = game.textContent.toLowerCase();
+                if (gameName.includes(searchTerm)) {
+                    game.style.display = 'block';
+                } else {
+                    game.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
