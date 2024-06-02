@@ -1,0 +1,443 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contact{
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    text-align: center;
+}
+
+.login{
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    text-align: center;
+}
+.container{
+    text-align: center;
+    max-width:800px;
+    margin:0 auto;
+}
+
+.container h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: purple;
+}
+
+.contact-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+}
+.contact-form{
+    text-align: left;
+}
+.contact-form h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color:#333;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f8f9fa;
+    color: #333;
+}
+input:focus, textarea:focus{
+    outline:none;
+    box-shadow: 0 0 8px #bbb;
+}
+button{
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #4caf50;
+    color:#fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button:hover{
+    background-color: #45a049;
+}
+.contact-info{
+    text-align: left;
+}
+.contact-info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.contact-info i{
+    margin-bottom: 10px;
+}
+.contact-info i{
+    color:#4caf50;
+    margin-right: 10px;
+}
+@media screen and (max-width:700px){
+    .container{
+        padding: 20px;
+    }
+    .contact-wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+body {
+    background-image: url(images/Home_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#dice_img {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar {
+    background: rgba(30, 30, 30, 0.8);
+    font-family: "Times New Roman";
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: #BB86FC;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: #E0E0E0;
+    font-weight: bold;
+    margin-right: 25px;
+}
+li img{
+    border-radius: 10%;
+}
+li.icontext{
+    margin-top: 100px;
+    margin-left: 65px;
+    font-size: 50px;
+    text-align: center;
+}
+
+button {
+    background-color: #3700B3;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+}
+
+button a {
+    color: #E0E0E0;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.box {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: width 0.8s;
+}
+
+.box:hover input {
+    width: 400px;
+}
+
+.box input {
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas {
+    color: #BB86FC;
+    font-size: 18px;
+}
+
+.lefttext{
+    float:left;
+    position: relative;
+    width: 70%;
+    left:0%;
+    color: whitesmoke;
+    background: rgba(55, 55, 55, 0.4);
+    font-family: "Times New Roman";
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.rightimage{
+    position: relative;
+    right:0%;
+    color: lightblue;
+    background: rgba(55, 55, 55, 0.4);
+    font-family: "Times New Roman";
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.rightimage img{
+    width: 300px;
+}
+
+p.title{
+    font-size: 30px;
+    font-weight: bolder;
+}
+p.head{
+    font-size: 28px;
+    font-weight: bold;
+}
+b{
+    font-size: 24px;
+}
+p.content{
+    margin-left: 20px;
+    font-size: 20px;
+}
+#allgames{
+    position: relative;
+}
+
+#level-display{
+    position: fixed;
+    top:100px;
+    right: 44%;
+    color: lightblue;
+    background: rgba(55, 55, 55, 0.4);
+    font-family: "Times New Roman";
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#button-container{
+    position: fixed;
+    top:300px;
+    right:35%;
+}
+#button-container2 input[type="button"]{
+    position: fixed;
+    top:300px;
+    right:35%;
+}
+#button-container input[type="button"] {
+    margin: 8px;
+}
+#sokobangame{
+    position: fixed;
+    top:125px;
+    left:80px;
+}
+#myCanvas {
+    width: 450px;
+    height: 450px;
+}
+.gamename{
+    position: fixed;
+    top:80px;
+    left: 80px;
+    color: #BB86FC;
+    font-size: 18px;
+    background: rgba(55, 55, 55, 1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 24px;
+    border: none;
+}
+.instructions {
+    position: fixed;
+    top: 150px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 350px; /* Adjust as needed */
+    background: rgba(55, 55, 55, 1);
+    color: lightblue;
+    font-family: "Times New Roman", serif;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    overflow-y: auto;
+    max-height: 70vh; 
+}
+
+.instructions pre {
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+.review {
+    position: fixed;
+    top: 575px;
+    left: 80px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: rgba(55, 55, 55, 1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color:white;
+}
+
+.circle-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 0%;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.circle-icon:hover {
+    transform: scale(1.1);
+}
+
+.circle-icon:active {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.circle-icon.liked {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+}
+
+.circle-icon.disliked {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+#resetButton2 {
+    position: relative;
+    left:600px;
+    top: 250px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.review {
+    position: fixed;
+    top: 600px;
+    left: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(55, 55, 55, 1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.like-container, .dislike-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.circle-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.circle-icon:hover {
+    transform: scale(1.1);
+}
+
+.circle-icon:active {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.circle-icon.liked {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+}
+
+.circle-icon.disliked {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+}
+
+#likeCount, #dislikeCount {
+    font-size: 18px;
+    color: white;
+}
+
+#score{
+    position: fixed;
+    top: 200px;
+    left: 800px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background: rgba(55, 55, 55, 1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color:white;
+}

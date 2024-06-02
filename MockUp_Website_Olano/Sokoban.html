@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleGames</title>
+    <script src="js/jquery-min.js"></script>
+    <link rel="stylesheet" href="external.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo">
+                <a href="Home.html"><img id="dice_img" src="images/Dice.png">SimpleGames</a>
+            </div>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <button><a href="LogIn.html">Log In</a></button>
+            </ul>
+        </div>
+    </nav>
+    <div id="level-display">Level: 1</div>
+    <div id="button-container">
+        <input type="number" id="level" placeholder="Level Number(1-15)">
+        <input type="button" onclick="Play()" id="playlevel" value="Play Level">
+    </div>
+    <div id="sokobangame">
+        <canvas id="myCanvas" width="630" height="630" style="border:1px solid #000000;"></canvas>
+    </div>
+    <div class="gamename">Sokoban</div>
+    <div class="instructions"><pre>
+<b>How to Play Sokoban:</b>
+Objective:
+Move all boxes (X) onto the goal positions (O).
+
+Controls:
+
+Arrow Up: Move up
+Arrow Down: Move down
+Arrow Left: Move left
+Arrow Right: Move right
+U: Undo the last move
+R: Reset the current level
+P: Play the level entered in the level input box
+Rules:
+
+Move the Player: Use the arrow keys to move the player (P) around the map.
+Push Boxes: Move next to a box (X) and push it by walking into it. Boxes can only be pushed (not pulled) and only one at a time.
+Reach Goals: Push all the boxes onto the goal positions (O). When a box is on a goal, it may appear differently (e.g., as /).
+Undo Moves: If you make a mistake, press 'U' to undo your last move.
+Reset Level: Press 'R' to reset the level if you get stuck.
+Change Level: Enter a level number in the level input box and press 'P' to play that level.
+Winning the Level:
+Once all boxes are on the goals, you win the level, and the game will automatically proceed to the next one. If you complete all levels, the game will restart from level 1 or show a congratulatory message.</pre>
+    </div>
+    <div class="review">
+        Review:
+        <div class="like-container">
+            <img class="circle-icon" src="images/like.png" id="likeBtn">
+            <span id="likeCount">5</span>
+        </div>
+        <div class="dislike-container">
+            <img class="circle-icon" src="images/dislike.png" id="dislikeBtn">
+            <span id="dislikeCount">1</span>
+        </div>
+    </div>
+    <script src="js/sokobanscript.js"></script>
+    <script>
+        var likeCount = 5;
+        var dislikeCount = 1;
+
+        document.getElementById('likeBtn').addEventListener('click', function() {
+            if (this.classList.toggle('liked')) {
+                likeCount++;
+                if (document.getElementById('dislikeBtn').classList.contains('disliked')) {
+                    dislikeCount--;
+                    document.getElementById('dislikeBtn').classList.remove('disliked');
+                }
+            } else {
+                likeCount--;
+            }
+            document.getElementById('likeCount').textContent = likeCount;
+            document.getElementById('dislikeCount').textContent = dislikeCount;
+        });
+
+        document.getElementById('dislikeBtn').addEventListener('click', function() {
+            if (this.classList.toggle('disliked')) {
+                dislikeCount++;
+                if (document.getElementById('likeBtn').classList.contains('liked')) {
+                    likeCount--;
+                    document.getElementById('likeBtn').classList.remove('liked');
+                }
+            } else {
+                dislikeCount--;
+            }
+            document.getElementById('likeCount').textContent = likeCount;
+            document.getElementById('dislikeCount').textContent = dislikeCount;
+        });
+    </script>
+</body>
+</html>
